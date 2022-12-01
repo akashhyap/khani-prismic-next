@@ -1,0 +1,68 @@
+{
+  "id": "page",
+  "label": "Page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": "URL slug for the page"
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "Title for the page",
+          "allowTargetBlank": false,
+          "single": "heading1"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "brief": {
+              "type": "SharedSlice"
+            },
+            "page_title": {
+              "type": "SharedSlice"
+            },
+            "table_of_content": {
+              "type": "SharedSlice"
+            },
+            "text": {
+              "type": "SharedSlice"
+            },
+            "section_header": {
+              "type": "SharedSlice"
+            },
+            "image": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Right panel": {
+      "slices1": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "text": {
+              "type": "SharedSlice"
+            },
+            "brief": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

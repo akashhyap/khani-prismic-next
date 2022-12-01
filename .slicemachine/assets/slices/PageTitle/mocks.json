@@ -1,0 +1,19 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Magna proident tempor excepteur aute irure consectetur cillum aute nulla eu commodo minim cupidatat.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "page_title"
+  }
+]

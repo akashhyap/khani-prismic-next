@@ -1,0 +1,72 @@
+{
+  "id": "most_popular",
+  "type": "SharedSlice",
+  "name": "MostPopular",
+  "description": "MostPopular",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "MostPopular",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading3,heading2,heading4"
+          }
+        }
+      },
+      "items": {
+        "cover_photo": {
+          "type": "Image",
+          "config": {
+            "label": "Cover photo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "dog_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Dog title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,strong,em,heading4,hyperlink"
+          }
+        },
+        "category": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Category",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "more_info": {
+          "type": "StructuredText",
+          "config": {
+            "label": "More info",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

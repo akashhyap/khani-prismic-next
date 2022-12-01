@@ -1,0 +1,22 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "disclaimer",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "Veniam irure voluptate irure minim in aliquip irure sint eu id nostrud elit. Elit commodo fugiat laborum. Ut qui consequat nulla enim non eu id reprehenderit esse.",
+        "spans": []
+      }
+    ]
+  }
+}

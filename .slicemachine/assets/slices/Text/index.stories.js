@@ -1,0 +1,15 @@
+import MyComponent from '../../../../slices/Text';
+
+export default {
+  title: 'slices/Text'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"text":[{"type":"paragraph","text":"Cupidatat anim ad qui ex ea nulla irure quis incididunt sint anim esse sit sint proident.","spans":[]},{"type":"paragraph","text":"Mollit adipisicing incididunt irure Lorem.","spans":[]},{"type":"paragraph","text":"Veniam non aute do eu velit labore velit do fugiat est commodo aute non. Irure irure consequat dolor mollit exercitation fugiat consectetur culpa.","spans":[]},{"type":"paragraph","text":"Nostrud aute officia proident ipsum ullamco esse. Reprehenderit minim fugiat in ea do ex et elit fugiat deserunt excepteur mollit. Occaecat enim anim labore velit ullamco mollit id minim qui ex Lorem minim ad.","spans":[]}]},"slice_type":"text","id":"_Default"}} />
+_Default.storyName = ''
+
+export const _RightColumn = () => <MyComponent slice={{"variation":"rightColumn","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"text":[{"type":"paragraph","text":"Voluptate duis ullamco duis ad proident magna ex quis dolor non aute ad sit occaecat aliquip. Veniam quis mollit aliqua deserunt amet laborum anim ad exercitation cupidatat id duis eiusmod ad. Do esse nostrud nulla deserunt laboris dolore dolore excepteur.","spans":[]}]},"slice_type":"text","id":"_RightColumn"}} />
+_RightColumn.storyName = ''
+
+export const _BlogPageText = () => <MyComponent slice={{"variation":"blogPageText","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"text":[{"type":"paragraph","text":"Cillum consectetur velit elit tempor elit commodo deserunt mollit excepteur laborum Lorem aute commodo mollit ea.","spans":[]}]},"slice_type":"text","id":"_BlogPageText"}} />
+_BlogPageText.storyName = ''

@@ -1,0 +1,84 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "settings",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "name": [
+      {
+        "type": "heading1",
+        "text": "Shorter",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Anim fugiat velit consequat labore. Fugiat id excepteur esse sunt.",
+        "spans": []
+      }
+    ],
+    "author_name": [
+      {
+        "type": "paragraph",
+        "text": "Ea ex adipisicing eu nostrud nostrud ea consectetur ipsum irure nostrud.",
+        "spans": []
+      }
+    ],
+    "profilePicture": {
+      "dimensions": {
+        "width": 2000,
+        "height": 2000
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+    },
+    "reviewed_by_label": [
+      {
+        "type": "paragraph",
+        "text": "Minim cillum anim duis duis anim qui culpa ullamco. Cupidatat sint tempor aliquip elit nisi nisi reprehenderit duis. Ut ut velit proident.",
+        "spans": []
+      }
+    ],
+    "reviewed_by": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
+    },
+    "checked_by_label": [
+      {
+        "type": "paragraph",
+        "text": "Enim in pariatur reprehenderit proident irure occaecat pariatur cillum deserunt. Anim deserunt laborum ea id duis sit sit sunt deserunt quis aliquip.",
+        "spans": []
+      }
+    ],
+    "checked_by": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+    },
+    "site_disclaimer": [
+      {
+        "type": "paragraph",
+        "text": "Non tempor eu eu consectetur amet sunt culpa laboris in est nostrud labore laboris. Elit irure aliqua tempor qui ullamco elit quis eu do consectetur officia cillum culpa.",
+        "spans": []
+      }
+    ]
+  }
+}

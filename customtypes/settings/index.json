@@ -1,0 +1,91 @@
+{
+  "id": "settings",
+  "label": "Settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "name": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Name",
+          "placeholder": "Name of your blog (e.g. your name)",
+          "allowTargetBlank": false,
+          "single": "heading1"
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "Short description of your blog",
+          "allowTargetBlank": false,
+          "single": "paragraph"
+        }
+      },
+      "author_name": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Author name",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "profilePicture": {
+        "type": "Image",
+        "config": {
+          "label": "Author profile picture",
+          "constraint": {
+            "width": 2000,
+            "height": 2000
+          },
+          "thumbnails": []
+        }
+      },
+      "reviewed_by_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Reviewed by name",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "reviewed_by": {
+        "type": "Image",
+        "config": {
+          "label": "Reviewed by profile picture",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "checked_by_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Checked by name",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "checked_by": {
+        "type": "Image",
+        "config": {
+          "label": "Checked by profile picture",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "site_disclaimer": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Site disclaimer",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}
