@@ -9,6 +9,7 @@
     "next:dev": "next",
     "build": "next build",
     "start": "next start",
+    "postbuild": "node ./scripts/algolia-search.js",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
     "format": "prettier --write .",
@@ -25,10 +26,12 @@
     "@prismicio/slice-simulator-react": "^0.2.2",
     "algoliasearch": "^4.14.2",
     "clsx": "^1.2.1",
+    "dotenv": "^16.0.3",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-instantsearch-dom": "^6.38.1"
+    "react-instantsearch-dom": "^6.38.1",
+    "react-instantsearch-hooks-web": "^6.38.1"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.3",

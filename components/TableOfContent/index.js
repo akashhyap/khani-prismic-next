@@ -5,6 +5,7 @@ import { faCircle, fas } from "@fortawesome/free-solid-svg-icons";
 
 function useHeadings() {
   const [headings, setHeadings] = useState([]);
+  
   useEffect(() => {
     const elements = Array.from(
       document.querySelectorAll("h2:not([class^='brief_title'])")

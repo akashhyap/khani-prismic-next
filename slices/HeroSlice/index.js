@@ -9,7 +9,7 @@ import { PrismicNextImage } from "@prismicio/next";
  */
 const HeroSlice = ({ slice }) => {
   const introText = slice.primary.title[0].text;
-  console.log("introText", introText);
+  // console.log("introText", introText);
   return (
     <section className="section relative bg-black">
       <div className="absolute inset-0">

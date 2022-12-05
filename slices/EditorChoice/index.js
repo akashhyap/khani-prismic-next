@@ -8,7 +8,7 @@ import { PrismicNextImage } from "@prismicio/next";
  * @param { EditorChoiceProps }
  */
 const EditorChoice = ({ slice }) => {
-  console.log("popular", slice);
+  // console.log("popular", slice);
   return (
     <section className="editors_choice max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-7 mt-4 py-11 px-5 xl:px-0">
       <div>
