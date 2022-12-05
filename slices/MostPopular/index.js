@@ -27,7 +27,7 @@ const MostPopular = ({ slice }) => {
           return (
             <div key={i} className="card">
               <PrismicLink field={item.link}>
-                <PrismicNextImage field={item.cover_photo} />
+                <PrismicNextImage field={item.cover_photo} alt={item.dog_title} />
                 <div className="card-desc">
                   <RichText field={item.category} className="category" />
                   <RichText field={item.dog_title} className="title py-4" />

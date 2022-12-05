@@ -18,7 +18,7 @@ const HeroSlice = ({ slice }) => {
           layout="fill"
           objectFit="cover"
           priority="true"
-          alt=""
+          alt="home"
         />
         <div className="absolute inset-0" />
       </div>
