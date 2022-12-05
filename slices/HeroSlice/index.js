@@ -17,6 +17,8 @@ const HeroSlice = ({ slice }) => {
           field={slice.primary.main_image}
           layout="fill"
           objectFit="cover"
+          priority="true"
+          alt=""
         />
         <div className="absolute inset-0" />
       </div>
