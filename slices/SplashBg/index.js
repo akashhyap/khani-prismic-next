@@ -6,7 +6,7 @@ import { PrismicNextImage } from "@prismicio/next";
 const SplashBg = ({ slice }) => (
   <section className='section relative bg-black'>
     <div className='absolute inset-0'>
-      <PrismicNextImage field={slice?.primary?.image} layout='fill' objectFit='cover' />
+      <PrismicNextImage field={slice?.primary?.image} layout='fill' objectFit='cover' alt={slice.primary.title} />
       <div className='absolute inset-0 bg-black bg-opacity-60  mix-blend-multiply' />
     </div>
     <div className='container relative py-32'>
