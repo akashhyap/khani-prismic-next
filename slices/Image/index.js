@@ -12,14 +12,14 @@ const Image = ({ slice }) => {
       <figure className="grid grid-cols-1 gap-4">
         {prismicH.isFilled.image(image) && (
           <div className={`bg-gray-100 ${slice.variation === "rounded" ? 'rounded-[15px] overflow-hidden' : ''}`}>
-            <PrismicNextImage field={image} layout="responsive" alt="image" />
+            <PrismicNextImage field={image} layout="responsive" alt={slice.primary.caption} />
           </div>
         )}
-        {prismicH.isFilled.richText(slice.primary.caption) && (
+        {/* {prismicH.isFilled.richText(slice.primary.caption) && (
           <figcaption className="text-center font-serif italic tracking-tight text-slate-500">
             <PrismicRichText field={slice.primary.caption} />
           </figcaption>
-        )}
+        )} */}
       </figure>
     </Bounded>
   );

@@ -43,6 +43,12 @@
             },
             "image": {
               "type": "SharedSlice"
+            },
+            "splash_bg": {
+              "type": "SharedSlice"
+            },
+            "most_popular": {
+              "type": "SharedSlice"
             }
           }
         }

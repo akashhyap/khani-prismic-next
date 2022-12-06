@@ -204,7 +204,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = BriefSlice | PageTitleSlice | TableOfContentSlice | TextSlice | SectionHeaderSlice | ImageSlice;
+type PageDocumentDataSlicesSlice = BriefSlice | PageTitleSlice | TableOfContentSlice | TextSlice | SectionHeaderSlice | ImageSlice | SplashBgSlice | MostPopularSlice;
 /**
  * Slice for *Page → Slice Zone*
  *
