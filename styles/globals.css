@@ -461,7 +461,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     }
 }
 
-.city__card .title h3 {
+.city__card .title h3, .city__prop .title h2 {
     font-family: var(--secondary-font-family);
     font-size: var(--h2-title-font-size);
+    color: var(--primary-page-title-color);
+}
+
+.desc_ph p strong {
+    color: var(--primary-page-title-color);
 }

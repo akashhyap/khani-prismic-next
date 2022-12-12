@@ -187,6 +187,119 @@
           }
         }
       },
+      "city_property": {
+        "library": "slices",
+        "id": "city_property",
+        "name": "CityProperty",
+        "description": "CityProperty",
+        "model": {
+          "id": "city_property",
+          "type": "SharedSlice",
+          "name": "CityProperty",
+          "description": "CityProperty",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CityProperty",
+              "primary": {},
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "contact_information": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Contact Information",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+                },
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Anim veniam occaecat incididunt mollit eiusmod id. Ipsum labore pariatur ex laboris exercitation sint eiusmod aliquip commodo quis aliquip Lorem sunt ut officia.",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Laborum aute aliquip sint enim tempor et ipsum. Incididunt culpa velit dolor do ad qui voluptate anim amet minim.",
+                    "spans": []
+                  }
+                ],
+                "contact_information": [
+                  {
+                    "type": "paragraph",
+                    "text": "Minim consectetur laboris consectetur tempor ut ea excepteur aliquip culpa ea id eu do irure. Commodo cillum elit occaecat velit.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {},
+            "slice_type": "city_property"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\Office\\Canipiccoli\\Headless\\Prismic\\khani\\slices\\CityProperty\\default\\preview.png",
+            "width": 1054,
+            "height": 359
+          }
+        }
+      },
       "contact_form": {
         "library": "slices",
         "id": "contact_form",

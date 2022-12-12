@@ -272,6 +272,11 @@
           }
         }
       }
+    },
+    "CityProperty": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

@@ -8,7 +8,7 @@ import RichText from "../../components/RichText";
  * @param { CityListProps }
  */
 const CityList = ({ slice }) => {
-  // console.log('slice', slice);
+  console.log('slice', slice);
   return (
     <div className="city__card">
       <span className="title">

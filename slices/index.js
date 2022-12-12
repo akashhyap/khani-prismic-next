@@ -2,6 +2,7 @@
 
 import Brief from './Brief';
 import CityList from './CityList';
+import CityProperty from './CityProperty';
 import ContactForm from './ContactForm';
 import EditorChoice from './EditorChoice';
 import HeroSlice from './HeroSlice';
@@ -19,6 +20,7 @@ import Text from './Text';
 export {
 	Brief,
 	CityList,
+	CityProperty,
 	ContactForm,
 	EditorChoice,
 	HeroSlice,
@@ -37,6 +39,7 @@ export {
 export const components = {
 	brief: Brief,
 	city_list: CityList,
+	city_property: CityProperty,
 	contact_form: ContactForm,
 	editor_choice: EditorChoice,
 	hero_slice: HeroSlice,

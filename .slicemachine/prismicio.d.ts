@@ -19,7 +19,34 @@ interface CitydetailDocumentData {
      *
      */
     title: prismicT.RichTextField;
+    /**
+     * Description field in *CityDetail*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: citydetail.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *CityDetail*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: citydetail.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<CitydetailDocumentDataSlicesSlice>;
 }
+/**
+ * Slice for *CityDetail → Slice Zone*
+ *
+ */
+type CitydetailDocumentDataSlicesSlice = CityPropertySlice;
 /**
  * CityDetail document from Prismic
  *
@@ -538,6 +565,75 @@ type CityListSliceVariation = CityListSliceDefault;
  *
  */
 export type CityListSlice = prismicT.SharedSlice<"city_list", CityListSliceVariation>;
+/**
+ * Item in CityProperty → Items
+ *
+ */
+export interface CityPropertySliceDefaultItem {
+    /**
+     * Image field in *CityProperty → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: city_property.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Title field in *CityProperty → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: city_property.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *CityProperty → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: city_property.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Contact Information field in *CityProperty → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: city_property.items[].contact_information
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    contact_information: prismicT.RichTextField;
+}
+/**
+ * Default variation for CityProperty Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `CityProperty`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CityPropertySliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<CityPropertySliceDefaultItem>>;
+/**
+ * Slice variation for *CityProperty*
+ *
+ */
+type CityPropertySliceVariation = CityPropertySliceDefault;
+/**
+ * CityProperty Shared Slice
+ *
+ * - **API ID**: `city_property`
+ * - **Description**: `CityProperty`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CityPropertySlice = prismicT.SharedSlice<"city_property", CityPropertySliceVariation>;
 /**
  * Default variation for ContactForm Slice
  *
@@ -1357,6 +1453,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CitydetailDocumentData, CitydetailDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
+        export type { CitydetailDocumentData, CitydetailDocumentDataSlicesSlice, CitydetailDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, CityPropertySliceDefaultItem, CityPropertySliceDefault, CityPropertySliceVariation, CityPropertySlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
     }
 }

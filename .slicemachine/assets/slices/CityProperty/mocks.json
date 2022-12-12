@@ -1,0 +1,42 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+        },
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Anim veniam occaecat incididunt mollit eiusmod id. Ipsum labore pariatur ex laboris exercitation sint eiusmod aliquip commodo quis aliquip Lorem sunt ut officia.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Laborum aute aliquip sint enim tempor et ipsum. Incididunt culpa velit dolor do ad qui voluptate anim amet minim.",
+            "spans": []
+          }
+        ],
+        "contact_information": [
+          {
+            "type": "paragraph",
+            "text": "Minim consectetur laboris consectetur tempor ut ea excepteur aliquip culpa ea id eu do irure. Commodo cillum elit occaecat velit.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {},
+    "slice_type": "city_property"
+  }
+]
