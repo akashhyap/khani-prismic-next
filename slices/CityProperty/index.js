@@ -18,7 +18,7 @@ const CityProperty = ({ slice }) => {
             <figure className="property_img max-w-[260px]">
               <PrismicNextImage field={item.image} alt={item.title} className="rounded-full" />
             </figure>
-            <div className="property_desc">
+            <div className="property_desc px-4">
               <RichText field={item.title} className="title" />
               <RichText field={item.description} className="mb-5 mt-2 text-xl" />
               <RichText field={item.contact_information} className="desc_ph text-xl" />

@@ -24,12 +24,12 @@ const CityDetail = ({ citydetail, navigation, footer, settings }) => {
       <Head>
         <title>{prismicH.asText(citydetail.data.title)}</title>
       </Head>
-      <main className="mx-auto max-w-4xl pl-6 pt-10 md:pl-0">
+      <main className="mx-auto max-w-4xl px-4 pt-10">
         <div className="city-intro mb-8">
           <RichText field={citydetail.data.title} className="page_title mb-3" />
           <RichText field={citydetail.data.description} className="mb-3" />
         </div>
-        <div className="city-property mb-5 grid grid-cols-1">
+        <div className="city-property grid grid-cols-1">
           <SliceZone slices={citydetail.data.slices} components={components} />
         </div>
       </main>

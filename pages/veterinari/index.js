@@ -24,12 +24,12 @@ const Veterinari = ({ veterinari, navigation, footer, settings }) => {
       <Head>
         <title>{prismicH.asText(veterinari.data.title)}</title>
       </Head>
-      <main>
-        <div className="city-intro mx-auto mb-5 max-w-5xl pl-6 pt-10 md:pl-0">
+      <main className="mx-auto max-w-5xl px-4 pt-10">
+        <div className="city-intro mb-8">
           <RichText field={veterinari.data.title} className="page_title mb-3" />
           <RichText field={veterinari.data.description} />
         </div>
-        <div className="grid lg:grid-cols-4 city-list mx-auto mb-5 max-w-5xl pl-6 pt-10 md:pl-0">
+        <div className="grid lg:grid-cols-4 city-list">
           <SliceZone slices={veterinari.data.slices} components={components} />
         </div>
       </main>
