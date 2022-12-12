@@ -93,6 +93,100 @@
         },
         "screenshotPaths": {}
       },
+      "city_list": {
+        "library": "slices",
+        "id": "city_list",
+        "name": "CityList",
+        "description": "CityList",
+        "model": {
+          "id": "city_list",
+          "type": "SharedSlice",
+          "name": "CityList",
+          "description": "CityList",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CityList",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {
+                "city_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "City link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "city_name": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "City name",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "city_link": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                },
+                "city_name": [
+                  {
+                    "type": "paragraph",
+                    "text": "Sint do pariatur Lorem consectetur laborum dolor in ipsum. Fugiat magna laborum enim et sunt elit veniam nisi eiusmod tempor commodo non. Cillum et nisi id Lorem sunt aliquip ullamco dolor proident nulla in ad anim.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Non Lorem velit sunt elit fugiat magna ullamco deserunt laborum aliqua enim Lorem incididunt aute. Consequat excepteur id nostrud velit do do cupidatat quis aliquip. Deserunt tempor dolor enim proident tempor adipisicing aliqua occaecat.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "city_list"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\Office\\Canipiccoli\\Headless\\Prismic\\khani\\slices\\CityList\\default\\preview.png",
+            "width": 758,
+            "height": 737
+          }
+        }
+      },
       "contact_form": {
         "library": "slices",
         "id": "contact_form",

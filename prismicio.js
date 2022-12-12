@@ -15,15 +15,18 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
  * @type {prismicH.LinkResolverFunction}
  */
 export const linkResolver = (doc) => {
-  // if (doc.type === "dog_breed") {
-  //   console.log('type', doc);
-  //   return `/${doc.slug}`;
-  // }
+  if (doc.type === "citydetail") {
+    return `/abruzzo/${doc.uid}`;
+  }
+
+  if (doc.type === "veterinari") {
+    return `/${doc.uid}`;
+  }
 
   if (doc.type === "page") {
     return `/${doc.uid}`;
   }
-
+ 
   return "/";
 };
 

@@ -59,7 +59,9 @@
       }
     },
     "homepage": {},
-    "footer": {}
+    "footer": {},
+    "veterinari": {},
+    "citydetail": {}
   },
   "slices": {
     "Text": {
@@ -248,6 +250,18 @@
       }
     },
     "TableOfContent": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "CityList": {
       "default": {
         "primary": {
           "title": {

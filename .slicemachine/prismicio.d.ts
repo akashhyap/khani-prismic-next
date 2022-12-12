@@ -6,6 +6,30 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for CityDetail documents */
+interface CitydetailDocumentData {
+    /**
+     * Title field in *CityDetail*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: citydetail.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+}
+/**
+ * CityDetail document from Prismic
+ *
+ * - **API ID**: `citydetail`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CitydetailDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<CitydetailDocumentData>, "citydetail", Lang>;
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
@@ -332,7 +356,58 @@ interface SettingsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
-export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument | PageDocument | SettingsDocument;
+/** Content for Veterinari documents */
+interface VeterinariDocumentData {
+    /**
+     * Title field in *Veterinari*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: veterinari.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *Veterinari*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: veterinari.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Veterinari*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: veterinari.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<VeterinariDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Veterinari → Slice Zone*
+ *
+ */
+type VeterinariDocumentDataSlicesSlice = CityListSlice;
+/**
+ * Veterinari document from Prismic
+ *
+ * - **API ID**: `veterinari`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type VeterinariDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<VeterinariDocumentData>, "veterinari", Lang>;
+export type AllDocumentTypes = CitydetailDocument | FooterDocument | HomepageDocument | NavigationDocument | PageDocument | SettingsDocument | VeterinariDocument;
 /**
  * Primary content in Brief → Primary
  *
@@ -398,6 +473,71 @@ type BriefSliceVariation = BriefSliceDefault;
  *
  */
 export type BriefSlice = prismicT.SharedSlice<"brief", BriefSliceVariation>;
+/**
+ * Primary content in CityList → Primary
+ *
+ */
+interface CityListSliceDefaultPrimary {
+    /**
+     * Title field in *CityList → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: city_list.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+}
+/**
+ * Item in CityList → Items
+ *
+ */
+export interface CityListSliceDefaultItem {
+    /**
+     * City link field in *CityList → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: city_list.items[].city_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    city_link: prismicT.LinkField;
+    /**
+     * City name field in *CityList → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: city_list.items[].city_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    city_name: prismicT.RichTextField;
+}
+/**
+ * Default variation for CityList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `CityList`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CityListSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CityListSliceDefaultPrimary>, Simplify<CityListSliceDefaultItem>>;
+/**
+ * Slice variation for *CityList*
+ *
+ */
+type CityListSliceVariation = CityListSliceDefault;
+/**
+ * CityList Shared Slice
+ *
+ * - **API ID**: `city_list`
+ * - **Description**: `CityList`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CityListSlice = prismicT.SharedSlice<"city_list", CityListSliceVariation>;
 /**
  * Default variation for ContactForm Slice
  *
@@ -1217,6 +1357,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
+        export type { CitydetailDocumentData, CitydetailDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
     }
 }

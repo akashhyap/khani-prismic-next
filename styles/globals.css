@@ -461,3 +461,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     }
 }
 
+.city__card .title h3 {
+    font-family: var(--secondary-font-family);
+    font-size: var(--h2-title-font-size);
+}
