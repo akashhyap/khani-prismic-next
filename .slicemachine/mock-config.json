@@ -61,7 +61,13 @@
     "homepage": {},
     "footer": {},
     "veterinari": {},
-    "citydetail": {}
+    "citydetail": {},
+    "abruzzo": {},
+    "basilicata": {},
+    "calabria": {},
+    "campania": {},
+    "emilia_romagna": {},
+    "toelettatori": {}
   },
   "slices": {
     "Text": {

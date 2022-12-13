@@ -1,0 +1,30 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "calabria",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Elit Lorem aliquip Lorem et do. Nisi esse excepteur ipsum ea in commodo ullamco.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Ex reprehenderit consectetur aliqua. Est in incididunt mollit.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}

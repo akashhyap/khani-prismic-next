@@ -1,0 +1,30 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "basilicata",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Et elit ut deserunt laboris eiusmod enim exercitation ex et. Elit culpa ad elit est sint proident sit exercitation aliquip velit voluptate officia est enim. Labore eiusmod in sint Lorem et occaecat labore consectetur quis ex magna esse.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Ex sunt enim aliquip sint cupidatat id laboris ipsum fugiat veniam voluptate commodo aliqua duis nulla.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}

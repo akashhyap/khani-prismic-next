@@ -6,57 +6,261 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
-/** Content for CityDetail documents */
-interface CitydetailDocumentData {
+/** Content for Abruzzo documents */
+interface AbruzzoDocumentData {
     /**
-     * Title field in *CityDetail*
+     * Title field in *Abruzzo*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: citydetail.title
+     * - **API ID Path**: abruzzo.title
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
     title: prismicT.RichTextField;
     /**
-     * Description field in *CityDetail*
+     * Description field in *Abruzzo*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: citydetail.description
+     * - **API ID Path**: abruzzo.description
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
     description: prismicT.RichTextField;
     /**
-     * Slice Zone field in *CityDetail*
+     * Slice Zone field in *Abruzzo*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
-     * - **API ID Path**: citydetail.slices[]
+     * - **API ID Path**: abruzzo.slices[]
      * - **Tab**: Main
      * - **Documentation**: https://prismic.io/docs/core-concepts/slices
      *
      */
-    slices: prismicT.SliceZone<CitydetailDocumentDataSlicesSlice>;
+    slices: prismicT.SliceZone<AbruzzoDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *CityDetail → Slice Zone*
+ * Slice for *Abruzzo → Slice Zone*
  *
  */
-type CitydetailDocumentDataSlicesSlice = CityPropertySlice;
+type AbruzzoDocumentDataSlicesSlice = CityPropertySlice;
 /**
- * CityDetail document from Prismic
+ * Abruzzo document from Prismic
  *
- * - **API ID**: `citydetail`
+ * - **API ID**: `abruzzo`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type CitydetailDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<CitydetailDocumentData>, "citydetail", Lang>;
+export type AbruzzoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<AbruzzoDocumentData>, "abruzzo", Lang>;
+/** Content for Basilicata documents */
+interface BasilicataDocumentData {
+    /**
+     * Title field in *Basilicata*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: basilicata.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *Basilicata*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: basilicata.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Basilicata*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: basilicata.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<BasilicataDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Basilicata → Slice Zone*
+ *
+ */
+type BasilicataDocumentDataSlicesSlice = CityPropertySlice;
+/**
+ * Basilicata document from Prismic
+ *
+ * - **API ID**: `basilicata`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BasilicataDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BasilicataDocumentData>, "basilicata", Lang>;
+/** Content for Calabria documents */
+interface CalabriaDocumentData {
+    /**
+     * Title field in *Calabria*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: calabria.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *Calabria*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: calabria.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Calabria*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: calabria.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<CalabriaDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Calabria → Slice Zone*
+ *
+ */
+type CalabriaDocumentDataSlicesSlice = CityPropertySlice;
+/**
+ * Calabria document from Prismic
+ *
+ * - **API ID**: `calabria`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CalabriaDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<CalabriaDocumentData>, "calabria", Lang>;
+/** Content for Campania documents */
+interface CampaniaDocumentData {
+    /**
+     * Title field in *Campania*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: campania.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *Campania*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: campania.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Campania*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: campania.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<CampaniaDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Campania → Slice Zone*
+ *
+ */
+type CampaniaDocumentDataSlicesSlice = CityPropertySlice;
+/**
+ * Campania document from Prismic
+ *
+ * - **API ID**: `campania`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CampaniaDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<CampaniaDocumentData>, "campania", Lang>;
+/** Content for Emilia Romagna documents */
+interface EmiliaRomagnaDocumentData {
+    /**
+     * Title field in *Emilia Romagna*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: emilia_romagna.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *Emilia Romagna*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: emilia_romagna.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Emilia Romagna*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: emilia_romagna.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<EmiliaRomagnaDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Emilia Romagna → Slice Zone*
+ *
+ */
+type EmiliaRomagnaDocumentDataSlicesSlice = CityPropertySlice;
+/**
+ * Emilia Romagna document from Prismic
+ *
+ * - **API ID**: `emilia_romagna`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type EmiliaRomagnaDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<EmiliaRomagnaDocumentData>, "emilia_romagna", Lang>;
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
@@ -383,6 +587,57 @@ interface SettingsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
+/** Content for Toelettatori documents */
+interface ToelettatoriDocumentData {
+    /**
+     * Title field in *Toelettatori*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: toelettatori.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *Toelettatori*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: toelettatori.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Toelettatori*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: toelettatori.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<ToelettatoriDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Toelettatori → Slice Zone*
+ *
+ */
+type ToelettatoriDocumentDataSlicesSlice = CityListSlice;
+/**
+ * Toelettatori document from Prismic
+ *
+ * - **API ID**: `toelettatori`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ToelettatoriDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ToelettatoriDocumentData>, "toelettatori", Lang>;
 /** Content for Veterinari documents */
 interface VeterinariDocumentData {
     /**
@@ -434,7 +689,7 @@ type VeterinariDocumentDataSlicesSlice = CityListSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type VeterinariDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<VeterinariDocumentData>, "veterinari", Lang>;
-export type AllDocumentTypes = CitydetailDocument | FooterDocument | HomepageDocument | NavigationDocument | PageDocument | SettingsDocument | VeterinariDocument;
+export type AllDocumentTypes = AbruzzoDocument | BasilicataDocument | CalabriaDocument | CampaniaDocument | EmiliaRomagnaDocument | FooterDocument | HomepageDocument | NavigationDocument | PageDocument | SettingsDocument | ToelettatoriDocument | VeterinariDocument;
 /**
  * Primary content in Brief → Primary
  *
@@ -1453,6 +1708,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { CitydetailDocumentData, CitydetailDocumentDataSlicesSlice, CitydetailDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, CityPropertySliceDefaultItem, CityPropertySliceDefault, CityPropertySliceVariation, CityPropertySlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
+        export type { AbruzzoDocumentData, AbruzzoDocumentDataSlicesSlice, AbruzzoDocument, BasilicataDocumentData, BasilicataDocumentDataSlicesSlice, BasilicataDocument, CalabriaDocumentData, CalabriaDocumentDataSlicesSlice, CalabriaDocument, CampaniaDocumentData, CampaniaDocumentDataSlicesSlice, CampaniaDocument, EmiliaRomagnaDocumentData, EmiliaRomagnaDocumentDataSlicesSlice, EmiliaRomagnaDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, ToelettatoriDocumentData, ToelettatoriDocumentDataSlicesSlice, ToelettatoriDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, CityPropertySliceDefaultItem, CityPropertySliceDefault, CityPropertySliceVariation, CityPropertySlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
     }
 }

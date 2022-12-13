@@ -8,39 +8,39 @@ import { Layout } from "../../components/Layout";
 import RichText from "../../components/RichText";
 import { CityListWrapper } from "../../components/CityListWrapper";
 
-const Abruzzo = ({ abruzzo, navigation, footer, settings }) => {
-  // console.log("abruzzo", abruzzo);
+const Calabria = ({ calabria, navigation, footer, settings }) => {
+  // console.log("calabria", calabria);
   return (
     <Layout navigation={navigation} footer={footer} settings={settings}>
       <Head>
-        <title>{prismicH.asText(abruzzo.data.title)}</title>
+        <title>{prismicH.asText(calabria.data.title)}</title>
       </Head>
       <CityListWrapper>
         <div className="city-intro mb-8">
-          <RichText field={abruzzo.data.title} className="page_title mb-3" />
-          <RichText field={abruzzo.data.description} className="mb-3" />
+          <RichText field={calabria.data.title} className="page_title mb-3" />
+          <RichText field={calabria.data.description} className="mb-3" />
         </div>
         <div className="city-property grid grid-cols-1">
-          <SliceZone slices={abruzzo.data.slices} components={components} />
+          <SliceZone slices={calabria.data.slices} components={components} />
         </div>
       </CityListWrapper>
     </Layout>
   );
 };
 
-export default Abruzzo;
+export default Calabria;
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
 
-  const abruzzo = await client.getByUID("abruzzo", params.uid);
+  const calabria = await client.getByUID("calabria", params.uid);
   const navigation = await client.getSingle("navigation");
   const footer = await client.getSingle("footer");
   const settings = await client.getSingle("settings");
 
   return {
     props: {
-      abruzzo,
+      calabria,
       footer,
       navigation,
       settings,
@@ -51,10 +51,12 @@ export async function getStaticProps({ params, previewData }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const abruzzos = await client.getAllByType("abruzzo");
+  const calabrias = await client.getAllByType("calabria");
 
   return {
-    paths: abruzzos.map((abruzzo) => prismicH.asLink(abruzzo, linkResolver)),
+    paths: calabrias.map((calabria) =>
+      prismicH.asLink(calabria, linkResolver)
+    ),
     fallback: false,
   };
 }

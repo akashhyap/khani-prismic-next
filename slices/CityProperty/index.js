@@ -9,16 +9,15 @@ import { PrismicNextImage } from "@prismicio/next";
  * @param { CityPropertyProps }
  */
 const CityProperty = ({ slice }) => {
-  // console.log("slice", slice);
   return (
     <>
       {slice?.items?.map((item, i) => {
         return (
-          <div key={i} className="city__prop flex items-center bg-white rounded-2xl shadow-md">
-            <figure className="property_img max-w-[260px]">
+          <div key={i} className="city__prop flex flex-wrap items-center bg-white rounded-2xl shadow-md mb-14 p-10 lg:p-5">
+            <figure className="property_img md:basis-1/4 max-w-[240px] mx-auto">
               <PrismicNextImage field={item.image} alt={item.title} className="rounded-full" />
             </figure>
-            <div className="property_desc px-4">
+            <div className="property_desc md:basis-3/4">
               <RichText field={item.title} className="title" />
               <RichText field={item.description} className="mb-5 mt-2 text-xl" />
               <RichText field={item.contact_information} className="desc_ph text-xl" />

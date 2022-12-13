@@ -1,6 +1,8 @@
 import React from "react";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
-import RichText from "../../components/RichText";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * @typedef {import("@prismicio/client").Content.CityListSlice} CityListSlice
@@ -8,9 +10,8 @@ import RichText from "../../components/RichText";
  * @param { CityListProps }
  */
 const CityList = ({ slice }) => {
-  console.log('slice', slice);
   return (
-    <div className="city__card">
+    <div className="city__card mt-7">
       <span className="title">
         {slice.primary.title ? (
           <PrismicRichText field={slice.primary.title} />
@@ -19,18 +20,23 @@ const CityList = ({ slice }) => {
         )}
       </span>
       {slice.primary.title ? (
-        <div className="mt-4">
+        <ul className="mt-4">
           {slice?.items?.map((item, i) => {
             return (
-              <PrismicLink
-                key={`${item.city_link.id}-${i}`}
-                field={item.city_link}
-              >
-                <RichText field={item.city_name} className="city_name" />
-              </PrismicLink>
+              <li key={`${item.city_link.id}-${i}`} className="city_name text-lg leading-8">
+                <PrismicLink field={item.city_link}>
+                  <span className="">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="mr-2 text-[#ff9f88]"
+                    ></FontAwesomeIcon>
+                  </span>
+                  <span>{item.city_name[0].text}</span>
+                </PrismicLink>
+              </li>
             );
           })}
-        </div>
+        </ul>
       ) : (
         ""
       )}

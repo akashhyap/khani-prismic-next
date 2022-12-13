@@ -1,0 +1,30 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "campania",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Ullamco laborum dolore veniam in deserunt est magna in magna incididunt.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Ullamco fugiat excepteur consectetur sint voluptate pariatur est laborum sunt quis consequat exercitation aliqua exercitation. Duis eiusmod ea ea culpa enim elit consectetur quis ex aliqua ad laboris.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}

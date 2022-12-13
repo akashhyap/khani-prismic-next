@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Questrial&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -19,6 +19,7 @@
     --h2-title-font-size: 29px;
 
     --font-weight-400: 400;
+    --font-weight-300: 300;
     --font-weight-600: 600;
     --font-weight-700: 700;
 
@@ -463,10 +464,22 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .city__card .title h3, .city__prop .title h2 {
     font-family: var(--secondary-font-family);
-    font-size: var(--h2-title-font-size);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-700);
     color: var(--primary-page-title-color);
 }
 
 .desc_ph p strong {
     color: var(--primary-page-title-color);
+}
+
+.city-page-header .page_title h1, .city-page-header .description p {
+    color: var(--white-color) ;
+}
+
+.city-page-header .description p {
+    font-family: var(--secondary-font-family);
+    font-size: 1.15rem;
+    font-weight: var(--font-weight-300);
+   
 }

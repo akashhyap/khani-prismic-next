@@ -15,19 +15,31 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
  * @type {prismicH.LinkResolverFunction}
  */
 export const linkResolver = (doc) => {
-  if (doc.type === "citydetail") {
-    return `/abruzzo/${doc.uid}`;
+  switch (doc.type) {
+    case "abruzzo":
+      return `/abruzzo/${doc.uid}`;
+      break;
+    case "basilicata":
+      return `/basilicata/${doc.uid}`;
+      break;
+    case "calabria":
+      return `/calabria/${doc.uid}`;
+      break;
+    case "campania":
+      return `/campania/${doc.uid}`;
+      break;
+    case "veterinari":
+      return `/${doc.uid}`;
+      break;
+    case "toelettatori":
+      return `/${doc.uid}`;
+      break;
+    case "page":
+      return `/${doc.uid}`;
+      break;
+    default:
+      return "/";
   }
-
-  if (doc.type === "veterinari") {
-    return `/${doc.uid}`;
-  }
-
-  if (doc.type === "page") {
-    return `/${doc.uid}`;
-  }
- 
-  return "/";
 };
 
 /**

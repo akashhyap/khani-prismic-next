@@ -1,0 +1,30 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "abruzzo",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Exercitation culpa consectetur sit deserunt nisi id nostrud ut sint commodo cillum nostrud reprehenderit occaecat. Id occaecat ipsum irure ullamco sit nostrud excepteur. Ad officia cillum et ut cupidatat in in consequat.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Sunt sunt deserunt labore pariatur eu commodo nisi nisi et.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}
