@@ -473,9 +473,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     color: var(--primary-page-title-color);
 }
 
-.city-page-header .page_title h1, .city-page-header .description p {
+/* .city-page-header .page_title h1, .city-page-header .description p {
     color: var(--white-color) ;
-}
+} */
 
 .city-page-header .description p {
     font-family: var(--secondary-font-family);

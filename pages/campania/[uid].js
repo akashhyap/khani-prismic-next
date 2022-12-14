@@ -7,6 +7,8 @@ import { components } from "../../slices";
 import { Layout } from "../../components/Layout";
 import RichText from "../../components/RichText";
 import { CityListWrapper } from "../../components/CityListWrapper";
+import { CityHeader } from "../../components/CityHeader";
+import { CityProperty } from "../../components/CityProperty";
 
 const Campania = ({ campania, navigation, footer, settings }) => {
   // console.log("campania", campania);
@@ -16,13 +18,13 @@ const Campania = ({ campania, navigation, footer, settings }) => {
         <title>{prismicH.asText(campania.data.title)}</title>
       </Head>
       <CityListWrapper>
-        <div className="city-intro mb-8">
-          <RichText field={campania.data.title} className="page_title mb-3" />
-          <RichText field={campania.data.description} className="mb-3" />
-        </div>
-        <div className="city-property grid grid-cols-1">
+        <CityHeader>
+          <RichText field={campania.data.title} className="page_title" />
+          <RichText field={campania.data.description} />
+        </CityHeader>
+        <CityProperty>
           <SliceZone slices={campania.data.slices} components={components} />
-        </div>
+        </CityProperty>
       </CityListWrapper>
     </Layout>
   );

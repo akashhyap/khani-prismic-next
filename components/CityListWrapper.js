@@ -7,7 +7,7 @@ export const CityListWrapper = ({
   children,
 }) => {
   return (
-    <Comp className={clsx("px-4 pt-16 md:px-6", className)}>
+    <Comp className={clsx("px-4 pt-10", className)}>
       <div
         className={clsx(
           "mx-auto w-full",
