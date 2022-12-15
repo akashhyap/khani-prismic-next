@@ -1,0 +1,23 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "razze_di_cani",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Laborum id incididunt et nostrud enim dolor esse Lorem cupidatat do exercitation commodo aliqua. Eiusmod id sint culpa laboris proident.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}

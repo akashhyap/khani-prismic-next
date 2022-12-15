@@ -14,7 +14,11 @@ import {
 import { useState } from "react";
 
 const NavItem = ({ children }) => {
-  return <li className="text-[22px] lg:text-[18px] leading-10 lg:leading-normal text-[#0f2a49]">{children}</li>;
+  return (
+    <li className="text-[22px] leading-10 text-[#0f2a49] lg:text-[18px] lg:leading-normal">
+      {children}
+    </li>
+  );
 };
 
 export const Header = ({ navigation }) => {
@@ -36,17 +40,15 @@ export const Header = ({ navigation }) => {
   return (
     <Bounded as="header" size="widest" className="bg-white">
       <div className="flex items-center justify-between gap-20">
-        <div className="site__logo relative col-span-1 h-[50px] w-[249px]">
-          <PrismicLink href="/">
-            {prismicH.isFilled.image(logo) && (
-              <PrismicNextImage
-                field={logo}
-                layout="fill"
-                className="object-contain"
-              />
-            )}
+       
+          <PrismicLink href="/" className="relative flex site__logo col-span-1 h-[50px] w-[249px]">
+            <PrismicNextImage
+              field={logo}
+              layout="fill"
+              className="object-contain"
+            />
           </PrismicLink>
-        </div>
+      
         {/* Toggle Menu Icon */}
         <span className="toggle_icon md:hidden" onClick={menuHandler}>
           <FontAwesomeIcon icon={faBars} className="ml-2"></FontAwesomeIcon>
@@ -57,7 +59,10 @@ export const Header = ({ navigation }) => {
           }`}
         >
           <span className="toggle_icon flex md:hidden" onClick={menuHandler}>
-            <FontAwesomeIcon icon={faXmark} className="ml-2 text-white"></FontAwesomeIcon>
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="ml-2 text-white"
+            ></FontAwesomeIcon>
           </span>
 
           <ul className="flex flex-wrap lg:items-center lg:justify-center lg:gap-10">

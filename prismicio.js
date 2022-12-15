@@ -28,10 +28,19 @@ export const linkResolver = (doc) => {
     case "campania":
       return `/campania/${doc.uid}`;
       break;
+    case "emilia_romagna":
+      return `/emilia-romagna/${doc.uid}`;
+      break;
     case "veterinari":
       return `/${doc.uid}`;
       break;
     case "toelettatori":
+      return `/${doc.uid}`;
+      break;
+    case "razze_di_cani":
+      return `/${doc.uid}`;
+      break;
+    case "guideutili":
       return `/${doc.uid}`;
       break;
     case "page":

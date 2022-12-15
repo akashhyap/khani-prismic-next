@@ -33,7 +33,7 @@ const EditorChoice = ({ slice }) => {
         {slice?.items?.map((item, i) => {
           return (
             <div key={i} className="card">
-              <PrismicNextImage field={item.image} />
+              <PrismicNextImage field={item.image}/>
               <div className="card-desc">
                 <RichText field={item.title} className="title py-2" />
                 <RichText field={item.description} className="more_desc" />

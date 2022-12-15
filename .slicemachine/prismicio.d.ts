@@ -296,6 +296,46 @@ interface FooterDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
+/** Content for GuideUtili documents */
+interface GuideutiliDocumentData {
+    /**
+     * Title field in *GuideUtili*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: guideutili.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *GuideUtili*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: guideutili.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<GuideutiliDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *GuideUtili → Slice Zone*
+ *
+ */
+type GuideutiliDocumentDataSlicesSlice = SplashBgSlice;
+/**
+ * GuideUtili document from Prismic
+ *
+ * - **API ID**: `guideutili`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GuideutiliDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<GuideutiliDocumentData>, "guideutili", Lang>;
 /** Content for HomePage documents */
 interface HomepageDocumentData {
     /**
@@ -475,6 +515,46 @@ type PageDocumentDataSlices1Slice = TextSlice | BriefSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+/** Content for Razze di Cani documents */
+interface RazzeDiCaniDocumentData {
+    /**
+     * Title field in *Razze di Cani*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: razze_di_cani.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Razze di Cani*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: razze_di_cani.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<RazzeDiCaniDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Razze di Cani → Slice Zone*
+ *
+ */
+type RazzeDiCaniDocumentDataSlicesSlice = SplashBgSlice;
+/**
+ * Razze di Cani document from Prismic
+ *
+ * - **API ID**: `razze_di_cani`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type RazzeDiCaniDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<RazzeDiCaniDocumentData>, "razze_di_cani", Lang>;
 /** Content for Settings documents */
 interface SettingsDocumentData {
     /**
@@ -689,7 +769,7 @@ type VeterinariDocumentDataSlicesSlice = CityListSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type VeterinariDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<VeterinariDocumentData>, "veterinari", Lang>;
-export type AllDocumentTypes = AbruzzoDocument | BasilicataDocument | CalabriaDocument | CampaniaDocument | EmiliaRomagnaDocument | FooterDocument | HomepageDocument | NavigationDocument | PageDocument | SettingsDocument | ToelettatoriDocument | VeterinariDocument;
+export type AllDocumentTypes = AbruzzoDocument | BasilicataDocument | CalabriaDocument | CampaniaDocument | EmiliaRomagnaDocument | FooterDocument | GuideutiliDocument | HomepageDocument | NavigationDocument | PageDocument | RazzeDiCaniDocument | SettingsDocument | ToelettatoriDocument | VeterinariDocument;
 /**
  * Primary content in Brief → Primary
  *
@@ -1708,6 +1788,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AbruzzoDocumentData, AbruzzoDocumentDataSlicesSlice, AbruzzoDocument, BasilicataDocumentData, BasilicataDocumentDataSlicesSlice, BasilicataDocument, CalabriaDocumentData, CalabriaDocumentDataSlicesSlice, CalabriaDocument, CampaniaDocumentData, CampaniaDocumentDataSlicesSlice, CampaniaDocument, EmiliaRomagnaDocumentData, EmiliaRomagnaDocumentDataSlicesSlice, EmiliaRomagnaDocument, FooterDocumentData, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, SettingsDocumentData, SettingsDocument, ToelettatoriDocumentData, ToelettatoriDocumentDataSlicesSlice, ToelettatoriDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, CityPropertySliceDefaultItem, CityPropertySliceDefault, CityPropertySliceVariation, CityPropertySlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
+        export type { AbruzzoDocumentData, AbruzzoDocumentDataSlicesSlice, AbruzzoDocument, BasilicataDocumentData, BasilicataDocumentDataSlicesSlice, BasilicataDocument, CalabriaDocumentData, CalabriaDocumentDataSlicesSlice, CalabriaDocument, CampaniaDocumentData, CampaniaDocumentDataSlicesSlice, CampaniaDocument, EmiliaRomagnaDocumentData, EmiliaRomagnaDocumentDataSlicesSlice, EmiliaRomagnaDocument, FooterDocumentData, FooterDocument, GuideutiliDocumentData, GuideutiliDocumentDataSlicesSlice, GuideutiliDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, RazzeDiCaniDocumentData, RazzeDiCaniDocumentDataSlicesSlice, RazzeDiCaniDocument, SettingsDocumentData, SettingsDocument, ToelettatoriDocumentData, ToelettatoriDocumentDataSlicesSlice, ToelettatoriDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, CityPropertySliceDefaultItem, CityPropertySliceDefault, CityPropertySliceVariation, CityPropertySlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
     }
 }

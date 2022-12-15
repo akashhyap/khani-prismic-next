@@ -24,10 +24,11 @@ const MostPopular = ({ slice }) => {
 
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
         {slice?.items?.map((item, i) => {
+       
           return (
-            <div key={i} className="card">
-              <PrismicLink field={item.link}>
-                <PrismicNextImage field={item.cover_photo} alt={item.dog_title} />
+            <div key={`${slice.id}-${i}`} className="card">
+              <PrismicLink field={item.link} className="relative">
+                <PrismicNextImage field={item.cover_photo}/>
                 <div className="card-desc">
                   <RichText field={item.category} className="category" />
                   <RichText field={item.dog_title} className="title py-4" />

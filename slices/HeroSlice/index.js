@@ -43,7 +43,6 @@ const HeroSlice = ({ slice }) => {
                 width={240}
                 height={83}
                 objectFit="contain"
-                alt={item.inset_image.alt}
                 className="pointer-events-none select-none"
               />
             );

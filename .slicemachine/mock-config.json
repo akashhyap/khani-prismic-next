@@ -67,7 +67,10 @@
     "calabria": {},
     "campania": {},
     "emilia_romagna": {},
-    "toelettatori": {}
+    "toelettatori": {},
+    "razze_di_cani": {},
+    "guide_utili": {},
+    "guideutili": {}
   },
   "slices": {
     "Text": {
