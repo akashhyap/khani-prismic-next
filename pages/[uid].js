@@ -54,6 +54,7 @@ const Page = ({ page, navigation, footer, settings }) => {
         <title>
           {prismicH.asText(page.data.title)}
         </title>
+        <meta name="description" content={prismicH.asText(page.data.meta_description)} />
       </Head>
       {!twoColumnsTag ? (
         <SliceZone slices={page.data.slices} components={components} />

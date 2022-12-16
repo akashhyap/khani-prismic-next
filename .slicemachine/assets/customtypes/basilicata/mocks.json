@@ -14,17 +14,24 @@
     "title": [
       {
         "type": "paragraph",
-        "text": "Et elit ut deserunt laboris eiusmod enim exercitation ex et. Elit culpa ad elit est sint proident sit exercitation aliquip velit voluptate officia est enim. Labore eiusmod in sint Lorem et occaecat labore consectetur quis ex magna esse.",
+        "text": "Occaecat irure magna ea adipisicing. Aliqua mollit pariatur eiusmod nostrud dolore cupidatat nostrud laborum excepteur proident adipisicing ex.",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Ex sunt enim aliquip sint cupidatat id laboris ipsum fugiat veniam voluptate commodo aliqua duis nulla.",
+        "text": "Cupidatat laborum magna elit eu magna cupidatat eiusmod occaecat exercitation ad dolor laboris non.",
         "spans": []
       }
     ],
-    "slices": []
+    "slices": [],
+    "meta_description": [
+      {
+        "type": "paragraph",
+        "text": "Ex do voluptate amet ex. Veniam id velit fugiat excepteur dolor esse id minim elit eiusmod in excepteur eiusmod officia nostrud.",
+        "spans": []
+      }
+    ]
   }
 }

@@ -14,17 +14,24 @@
     "title": [
       {
         "type": "paragraph",
-        "text": "Elit Lorem aliquip Lorem et do. Nisi esse excepteur ipsum ea in commodo ullamco.",
+        "text": "Eiusmod sunt velit qui velit consectetur do. Pariatur consectetur officia aliqua et eu.",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Ex reprehenderit consectetur aliqua. Est in incididunt mollit.",
+        "text": "Lorem incididunt magna magna irure magna. Culpa sunt dolor ullamco ut.",
         "spans": []
       }
     ],
-    "slices": []
+    "slices": [],
+    "meta_description": [
+      {
+        "type": "paragraph",
+        "text": "Consequat minim ad ut veniam laborum mollit laboris adipisicing Lorem irure exercitation sit. Excepteur exercitation consectetur in eiusmod irure amet. Aliqua irure quis eu.",
+        "spans": []
+      }
+    ]
   }
 }

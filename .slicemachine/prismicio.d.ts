@@ -41,6 +41,17 @@ interface AbruzzoDocumentData {
      *
      */
     slices: prismicT.SliceZone<AbruzzoDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *Abruzzo*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: abruzzo.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Abruzzo → Slice Zone*
@@ -92,6 +103,17 @@ interface BasilicataDocumentData {
      *
      */
     slices: prismicT.SliceZone<BasilicataDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *Basilicata*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: basilicata.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Basilicata → Slice Zone*
@@ -143,6 +165,17 @@ interface CalabriaDocumentData {
      *
      */
     slices: prismicT.SliceZone<CalabriaDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *Calabria*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: calabria.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Calabria → Slice Zone*
@@ -194,6 +227,17 @@ interface CampaniaDocumentData {
      *
      */
     slices: prismicT.SliceZone<CampaniaDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *Campania*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: campania.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Campania → Slice Zone*
@@ -245,6 +289,17 @@ interface EmiliaRomagnaDocumentData {
      *
      */
     slices: prismicT.SliceZone<EmiliaRomagnaDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *Emilia Romagna*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: emilia_romagna.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Emilia Romagna → Slice Zone*
@@ -516,6 +571,17 @@ interface PageDocumentData {
      *
      */
     slices1: prismicT.SliceZone<PageDocumentDataSlices1Slice>;
+    /**
+     * Meta Description field in *Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Page → Slice Zone*
