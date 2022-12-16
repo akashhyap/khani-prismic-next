@@ -256,7 +256,7 @@ h6 {
     color: var(--primary-page-title-color)
 }
 
-.disclaimer h6 {
+.disclaimer h6, .disclaimer p {
     color: #86c8f4
 }
 
