@@ -199,10 +199,11 @@ h6 {
     padding-right: 10px;
 }
 
-.newsletter_form h6 {
+.newsletter_form p {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 7px;
+    color: var(--white-color);
 }
 
 .newsletter_form input {
@@ -243,7 +244,7 @@ h6 {
 }
 
 .copyright p {
-    color: #777;
+    color: var(--white-color);
     font-size: 16px;
     text-align: center;
 }
