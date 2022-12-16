@@ -2,6 +2,8 @@ import RichText from "../../components/RichText";
 import CustomLink from "../../components/CustomLink";
 import { PrismicNextImage } from "@prismicio/next";
 
+import * as prismicH from "@prismicio/helpers"
+
 /**
  * @typedef {import("@prismicio/client").Content.HeroSliceSlice} HeroSliceSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<HeroSliceSlice>} HeroSliceProps
@@ -10,11 +12,13 @@ import { PrismicNextImage } from "@prismicio/next";
 const HeroSlice = ({ slice }) => {
   const introText = slice.primary.title[0].text;
   // console.log("introText", introText);
+  const splashImage = prismicH.asImageSrc(slice.primary.main_image) && slice.primary.main_image;
+
   return (
     <section className="section relative bg-black">
       <div className="absolute inset-0">
         <PrismicNextImage
-          field={slice.primary.main_image}
+          field={splashImage}
           layout="fill"
           objectFit="cover"
           priority="true"
@@ -22,11 +26,6 @@ const HeroSlice = ({ slice }) => {
         <div className="absolute inset-0" />
       </div>
       <div className="container relative mx-auto max-w-5xl pt-16">
-        {/* <RichText
-        field={slice.primary.title}
-        className="hero_title"
-      /> */}
-
         <div
           className="hero_title mb-10 text-center"
           dangerouslySetInnerHTML={{ __html: introText }}
