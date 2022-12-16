@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Questrial&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Questrial&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        @apply font-primary
+    }
+    h2,h3,h4 {
+        @apply font-secondary
+    }
+}
 
 :root {
     --primary-title-color: #003366;
@@ -22,12 +31,6 @@
     --font-weight-300: 300;
     --font-weight-600: 600;
     --font-weight-700: 700;
-
-    --secondary-font-family: 'Poppins', sans-serif;
-
-    --tertiary-font-family: 'Open Sans', sans-serif;
-
-
 }
 
 *,
@@ -41,7 +44,7 @@ html {
 }
 
 body {
-    font-family: 'Questrial', sans-serif;
+    /* font-family: 'Questrial', sans-serif; */
     font-size: 22px;
     color: #676767;
 }
@@ -83,10 +86,10 @@ h6 {
     color: var(--primary-text-color);
 }
 
-.card .title h2,
+/* .card .title h2,
 .card .title h3 {
     font-family: var(--secondary-font-family);
-}
+} */
 
 .card {
     background-color: var(--white-color);
@@ -154,7 +157,7 @@ h6 {
 
 .section_header h2,
 .newsletter_title h2 {
-    font-family: var(--secondary-font-family);
+    /* font-family: var(--secondary-font-family); */
     font-size: var(--h2-title-font-size);
     line-height: 51.15px;
     font-weight: var(--font-weight-700);
@@ -251,7 +254,7 @@ h6 {
 }
 
 .brief_title {
-    font-family: var(--secondary-font-family);
+    /* font-family: var(--secondary-font-family); */
     font-size: var(--h2-title-font-size);
     line-height: 40px;
     font-weight: 700;
@@ -287,7 +290,7 @@ h6 {
 }
 
 .brief p:first-child {
-    font-family: var(--secondary-font-family);
+    /* font-family: var(--secondary-font-family); */
     font-size: 29px;
     font-weight: var(--font-weight-700);
     padding-right: 20px;
@@ -314,7 +317,7 @@ h6 {
 }
 
 .page_title h2 {
-    font-family: var(--secondary-font-family);
+    /* font-family: var(--secondary-font-family); */
     font-size: var(--h2-title-font-size);
     font-weight: var(--font-weight-700);
     color: var(--h2-text-color)
@@ -327,7 +330,7 @@ h6 {
 
 
 .table_of_content .title {
-    font-family: var(--secondary-font-family);
+    /* font-family: var(--secondary-font-family); */
     font-size: var(--h2-title-font-size);
     font-weight: var(--font-weight-700);
     color: var(--primary-page-title-color);
@@ -385,11 +388,12 @@ h6 {
     height: auto;
 }
 
-.stikcy_nav--content form{
+.stikcy_nav--content form {
     position: relative;
     width: 100%;
 }
-.stikcy_nav--content form .algolia_input{
+
+.stikcy_nav--content form .algolia_input {
     width: 100%;
     border: none;
     border-bottom: 2px solid #1b9cfc;
@@ -401,11 +405,12 @@ h6 {
     color: var(--primary-page-title-color);
 }
 
-.stikcy_nav--content form .algolia_input::placeholder{
+.stikcy_nav--content form .algolia_input::placeholder {
     color: var(--primary-page-title-color);
 }
 
-.stikcy_nav--content form .algolia_input:focus, .stikcy_nav--content form .algolia_input:focus-visible{
+.stikcy_nav--content form .algolia_input:focus,
+.stikcy_nav--content form .algolia_input:focus-visible {
     border: none;
     border-bottom: 2px solid #1b9cfc;
 }
@@ -418,13 +423,25 @@ h6 {
 }
 
 /* clears the ‘X’ from Internet Explorer */
-input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
-input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 /* clears the ‘X’ from Chrome */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
 
 .menu_wrapper .toggle_icon {
     height: 64px;
@@ -448,22 +465,24 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
     .menu_wrapper ul {
         flex-direction: column;
-    } 
+    }
 
-    .menu_wrapper ul li a{
+    .menu_wrapper ul li a {
         color: #ffffff;
-    } 
+    }
+
     .site__logo {
         order: 2;
     }
-    
+
     .search__icon {
         order: 3;
     }
 }
 
-.city__card .title h3, .city__prop .title h2 {
-    font-family: var(--secondary-font-family);
+.city__card .title h3,
+.city__prop .title h2 {
+    /* font-family: var(--secondary-font-family); */
     font-size: 1.5rem;
     font-weight: var(--font-weight-700);
     color: var(--primary-page-title-color);
@@ -478,8 +497,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 } */
 
 .city-page-header .description p {
-    font-family: var(--secondary-font-family);
     font-size: 1.15rem;
     font-weight: var(--font-weight-300);
-   
+
 }

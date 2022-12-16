@@ -5,13 +5,13 @@ export default function Document() {
     <Html>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
           rel="stylesheet"
-        />
+        ></link>
         <link
-          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
           rel="stylesheet"
-        />
+        ></link>
       </Head>
       <body className="overflow-x-hidden antialiased">
         <Main />

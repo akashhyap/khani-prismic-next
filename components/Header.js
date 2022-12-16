@@ -41,7 +41,7 @@ export const Header = ({ navigation }) => {
     <Bounded as="header" size="widest" className="bg-white">
       <div className="flex items-center justify-between gap-20">
        
-          <PrismicLink href="/" className="relative flex site__logo col-span-1 h-[50px] w-[249px]">
+          <PrismicLink href="/" aria-label="Site logo" className="relative flex site__logo col-span-1 h-[50px] w-[249px]">
             <PrismicNextImage
               field={logo}
               layout="fill"
