@@ -1,6 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Questrial&display=swap'); */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +6,11 @@
     html {
         @apply font-primary
     }
-    h2,h3,h4 {
+
+    h2,
+    h3,
+    h4,
+    .category p {
         @apply font-secondary
     }
 }
@@ -23,12 +24,15 @@
     --success-color: #4CAF50;
     --white-color: #ffffff;
 
+    --base-font-size: 1rem;
+
     --h1-title-font-size: 54px;
     --h1-title-line-height: 60px;
     --h2-title-font-size: 29px;
 
-    --font-weight-400: 400;
     --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
     --font-weight-600: 600;
     --font-weight-700: 700;
 }
@@ -44,8 +48,6 @@ html {
 }
 
 body {
-    /* font-family: 'Questrial', sans-serif; */
-    font-size: 22px;
     color: #676767;
 }
 
@@ -77,10 +79,11 @@ h6 {
 }
 
 
+.section_title h2,
 .section_title h3,
 .card .title h2,
 .card .title h3 {
-    font-size: 27px;
+    font-size: var(--h2-title-font-size);
     line-height: 37px;
     font-weight: var(--font-weight-700);
     color: var(--primary-text-color);
@@ -103,10 +106,19 @@ h6 {
     margin-bottom: 0;
 }
 
+.category p,
 .category h4,
 .category h5,
 .category h6 {
+    font-size: 16px;
+    font-weight: var(--font-weight-500);
     color: var(--hightlight-text-color);
+}
+
+@media screen and (max-width:767px) {
+   .category p {
+    color: var(--primary-text-color);
+   } 
 }
 
 .card .title h2,
@@ -123,7 +135,7 @@ h6 {
 }
 
 .more_desc p {
-    font-size: 18px;
+    font-size: var(--base-font-size);
     margin-bottom: 10px;
     margin-top: 5px;
     line-height: 2rem;

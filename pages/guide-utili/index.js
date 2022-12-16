@@ -23,12 +23,12 @@ const GuideUtili = ({ guideutili, pages, navigation, footer, settings }) => {
     <Layout navigation={navigation} footer={footer} settings={settings}>
       <Head>
         <title>{prismicH.asText(guideutili.data.title)}</title>
+        <meta name="description" content={prismicH.asText(guideutili.data.meta_description)} />
       </Head>
       <SliceZone slices={guideutili.data.slices} components={components} />
       <Bounded size="widest">
         <div className="mt-4 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {pages.map((post, i) => {
-            console.log("POST==>", post);
             const guideUtili = post.tags.find((tag) => tag === "guideUtili");
             const postImage = post.data?.slices;
             const date = prismicH.asDate(

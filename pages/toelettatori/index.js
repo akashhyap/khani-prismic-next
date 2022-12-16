@@ -16,6 +16,7 @@ const Toelettatori = ({ toelettatori, navigation, footer, settings }) => {
     <Layout navigation={navigation} footer={footer} settings={settings}>
       <Head>
         <title>{prismicH.asText(toelettatori.data.title)}</title>
+        <meta name="description" content={prismicH.asText(toelettatori.data.meta_description)} />
       </Head>
       <CityListWrapper size="wider">
         <CityHeader>

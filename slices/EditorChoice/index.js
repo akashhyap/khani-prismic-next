@@ -1,12 +1,8 @@
 import RichText from "../../components/RichText";
 import CustomLink from "../../components/CustomLink";
 import { PrismicNextImage } from "@prismicio/next";
+import * as prismicH from "@prismicio/helpers"
 
-/**
- * @typedef {import("@prismicio/client").Content.EditorChoiceSlice} EditorChoiceSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<EditorChoiceSlice>} EditorChoiceProps
- * @param { EditorChoiceProps }
- */
 const EditorChoice = ({ slice }) => {
   // console.log("popular", slice);
   return (
@@ -31,9 +27,10 @@ const EditorChoice = ({ slice }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 col-span-2">
         {slice?.items?.map((item, i) => {
+          const image = prismicH.asImageSrc(item.image) && item.image;
           return (
             <div key={i} className="card">
-              <PrismicNextImage field={item.image}/>
+              <PrismicNextImage field={image}/>
               <div className="card-desc">
                 <RichText field={item.title} className="title py-2" />
                 <RichText field={item.description} className="more_desc" />

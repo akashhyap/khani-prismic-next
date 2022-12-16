@@ -14,10 +14,17 @@
     "title": [
       {
         "type": "paragraph",
-        "text": "Enim adipisicing minim deserunt Lorem incididunt nulla nostrud cillum reprehenderit minim id labore dolor.",
+        "text": "Dolor Lorem laboris eiusmod amet deserunt nulla. Elit ex non laboris incididunt ad ex commodo cillum magna commodo. Magna ex esse nostrud irure.",
         "spans": []
       }
     ],
-    "slices": []
+    "slices": [],
+    "meta_description": [
+      {
+        "type": "paragraph",
+        "text": "Tempor ea sunt anim nulla nisi occaecat laboris aliqua ea exercitation consectetur deserunt.",
+        "spans": []
+      }
+    ]
   }
 }

@@ -320,6 +320,17 @@ interface GuideutiliDocumentData {
      *
      */
     slices: prismicT.SliceZone<GuideutiliDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *GuideUtili*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: guideutili.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *GuideUtili → Slice Zone*
@@ -371,6 +382,17 @@ interface HomepageDocumentData {
      *
      */
     slices: prismicT.SliceZone<HomepageDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *HomePage*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *HomePage → Slice Zone*
@@ -539,6 +561,17 @@ interface RazzeDiCaniDocumentData {
      *
      */
     slices: prismicT.SliceZone<RazzeDiCaniDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *Razze di Cani*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: razze_di_cani.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Razze di Cani → Slice Zone*
@@ -702,6 +735,17 @@ interface ToelettatoriDocumentData {
      *
      */
     slices: prismicT.SliceZone<ToelettatoriDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *Toelettatori*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: toelettatori.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Toelettatori → Slice Zone*
@@ -753,6 +797,17 @@ interface VeterinariDocumentData {
      *
      */
     slices: prismicT.SliceZone<VeterinariDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *Veterinari*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: veterinari.meta_description
+     * - **Tab**: SEO
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismicT.RichTextField;
 }
 /**
  * Slice for *Veterinari → Slice Zone*

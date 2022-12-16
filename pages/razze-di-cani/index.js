@@ -29,6 +29,7 @@ const RazzeDiCani = ({
     <Layout navigation={navigation} footer={footer} settings={settings}>
       <Head>
         <title>{prismicH.asText(razze_di_cani.data.title)}</title>
+        <meta name="description" content={prismicH.asText(razze_di_cani.data.meta_description)} />
       </Head>
       <SliceZone slices={razze_di_cani.data.slices} components={components} />
       <Bounded size="widest">

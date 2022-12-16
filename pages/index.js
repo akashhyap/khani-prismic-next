@@ -8,7 +8,6 @@ import { Home } from "../components/Home";
 
 
 const Index = ({ footer, navigation, settings, homepage }) => {
-
   return (
     <Layout
       withHeaderDivider={false}
@@ -18,6 +17,7 @@ const Index = ({ footer, navigation, settings, homepage }) => {
     >
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
+        <meta name="description" content={prismicH.asText(homepage.data.meta_description)} />
       </Head>
       <Home homepage={homepage} />
     </Layout>

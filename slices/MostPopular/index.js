@@ -1,12 +1,8 @@
 import RichText from "../../components/RichText";
 import { PrismicLink } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
+import * as prismicH from "@prismicio/helpers"
 
-/**
- * @typedef {import("@prismicio/client").Content.MostPopularSlice} MostPopularSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<MostPopularSlice>} MostPopularProps
- * @param { MostPopularProps }
- */
 const MostPopular = ({ slice }) => {
   // console.log("popular", slice);
   return (
@@ -24,11 +20,11 @@ const MostPopular = ({ slice }) => {
 
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
         {slice?.items?.map((item, i) => {
-       
+          const coverPhoto = prismicH.asImageSrc(item.cover_photo) && item.cover_photo;
           return (
             <div key={`${slice.id}-${i}`} className="card">
               <PrismicLink field={item.link} className="relative">
-                <PrismicNextImage field={item.cover_photo}/>
+                <PrismicNextImage field={coverPhoto}/>
                 <div className="card-desc">
                   <RichText field={item.category} className="category" />
                   <RichText field={item.dog_title} className="title py-4" />

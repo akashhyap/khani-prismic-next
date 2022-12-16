@@ -10,10 +10,10 @@ import * as prismicH from "@prismicio/helpers"
  * @param { HeroSliceProps }
  */
 const HeroSlice = ({ slice }) => {
+  
   const introText = slice.primary.title[0].text;
-  // console.log("introText", introText);
   const splashImage = prismicH.asImageSrc(slice.primary.main_image) && slice.primary.main_image;
-
+  
   return (
     <section className="section relative bg-black">
       <div className="absolute inset-0">
@@ -33,10 +33,11 @@ const HeroSlice = ({ slice }) => {
 
         <figure>
           {slice?.items?.map((item, i) => {
+            const insetImage = prismicH.asImageSrc(item.inset_image) && item.inset_image;
             return (
               <PrismicNextImage
                 key={i}
-                field={item.inset_image}
+                field={insetImage}
                 layout="responsive"
                 width={240}
                 height={83}
