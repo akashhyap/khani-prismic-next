@@ -41,6 +41,7 @@ const HeroSlice = ({ slice }) => {
                 layout="responsive"
                 width={240}
                 height={83}
+                priority="true"
                 objectFit="contain"
                 className="pointer-events-none select-none"
               />
