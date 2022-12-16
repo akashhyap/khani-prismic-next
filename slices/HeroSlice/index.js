@@ -21,7 +21,7 @@ const HeroSlice = ({ slice }) => {
           field={splashImage}
           layout="fill"
           objectFit="cover"
-          priority="true"
+          priority={true}
         />
         <div className="absolute inset-0" />
       </div>
