@@ -8,6 +8,7 @@ import { Layout } from "../../components/Layout";
 import RichText from "../../components/RichText";
 import { CityListWrapper } from "../../components/CityListWrapper";
 import { CityHeader } from "../../components/CityHeader";
+import { Breadcrumb } from "../../components/Breadcrumb";
 
 const Toelettatori = ({ toelettatori, navigation, footer, settings }) => {
   // console.log("toelettatori", toelettatori);
@@ -16,9 +17,15 @@ const Toelettatori = ({ toelettatori, navigation, footer, settings }) => {
     <Layout navigation={navigation} footer={footer} settings={settings}>
       <Head>
         <title>{prismicH.asText(toelettatori.data.title)}</title>
-        <meta name="description" content={prismicH.asText(toelettatori.data.meta_description)} />
+        <meta
+          name="description"
+          content={prismicH.asText(toelettatori.data.meta_description)}
+        />
       </Head>
       <CityListWrapper size="wider">
+        {/* Breadcrumb */}
+        <Breadcrumb title={prismicH.asText(toelettatori.data.title)} />
+        {/* End Breadcrumb */}
         <CityHeader>
           <RichText
             field={toelettatori.data.title}

@@ -9,6 +9,7 @@ import RichText from "../../components/RichText";
 import { CityListWrapper } from "../../components/CityListWrapper";
 import { CityHeader } from "../../components/CityHeader";
 import { CityProperty } from "../../components/CityProperty";
+import { CityBreadcrumb } from "../../components/CityBreadcrumb";
 
 const Calabria = ({ calabria, navigation, footer, settings }) => {
   // console.log("calabria", calabria);
@@ -19,6 +20,7 @@ const Calabria = ({ calabria, navigation, footer, settings }) => {
       </Head>
       <CityListWrapper>
         <CityHeader>
+          <CityBreadcrumb title={calabria.data.title} />
           <RichText field={calabria.data.title} className="page_title" />
           <RichText field={calabria.data.description} />
         </CityHeader>
@@ -56,9 +58,7 @@ export async function getStaticPaths() {
   const calabrias = await client.getAllByType("calabria");
 
   return {
-    paths: calabrias.map((calabria) =>
-      prismicH.asLink(calabria, linkResolver)
-    ),
+    paths: calabrias.map((calabria) => prismicH.asLink(calabria, linkResolver)),
     fallback: false,
   };
 }

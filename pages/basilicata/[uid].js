@@ -9,6 +9,7 @@ import RichText from "../../components/RichText";
 import { CityListWrapper } from "../../components/CityListWrapper";
 import { CityHeader } from "../../components/CityHeader";
 import { CityProperty } from "../../components/CityProperty";
+import { CityBreadcrumb } from "../../components/CityBreadcrumb";
 
 const Basilicata = ({ basilicata, navigation, footer, settings }) => {
   // console.log("basilicata", basilicata);
@@ -19,8 +20,12 @@ const Basilicata = ({ basilicata, navigation, footer, settings }) => {
       </Head>
       <CityListWrapper>
         <CityHeader>
+          <CityBreadcrumb title={basilicata.data.title} />
           <RichText field={basilicata.data.title} className="page_title" />
-          <RichText field={basilicata.data.description} className="page_description" />
+          <RichText
+            field={basilicata.data.description}
+            className="page_description"
+          />
         </CityHeader>
         <CityProperty>
           <SliceZone slices={basilicata.data.slices} components={components} />

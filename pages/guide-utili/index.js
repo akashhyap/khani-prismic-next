@@ -11,6 +11,7 @@ import { CityHeader } from "../../components/CityHeader";
 import { Bounded } from "../../components/Bounded";
 import { PrismicNextImage } from "@prismicio/next";
 import Link from "next/link";
+import { Breadcrumb } from "../../components/Breadcrumb";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -23,10 +24,16 @@ const GuideUtili = ({ guideutili, pages, navigation, footer, settings }) => {
     <Layout navigation={navigation} footer={footer} settings={settings}>
       <Head>
         <title>{prismicH.asText(guideutili.data.title)}</title>
-        <meta name="description" content={prismicH.asText(guideutili.data.meta_description)} />
+        <meta
+          name="description"
+          content={prismicH.asText(guideutili.data.meta_description)}
+        />
       </Head>
       <SliceZone slices={guideutili.data.slices} components={components} />
       <Bounded size="widest">
+        {/* Breadcrumb */}
+        <Breadcrumb title={prismicH.asText(guideutili.data.title)} />
+        {/* End Breadcrumb */}
         <div className="mt-4 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {pages.map((post, i) => {
             const guideUtili = post.tags.find((tag) => tag === "guideUtili");

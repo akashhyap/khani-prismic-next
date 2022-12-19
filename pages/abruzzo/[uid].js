@@ -9,9 +9,12 @@ import RichText from "../../components/RichText";
 import { CityListWrapper } from "../../components/CityListWrapper";
 import { CityHeader } from "../../components/CityHeader";
 import { CityProperty } from "../../components/CityProperty";
+import { CityBreadcrumb } from "../../components/CityBreadcrumb";
+
 
 const Abruzzo = ({ abruzzo, navigation, footer, settings }) => {
   // console.log("abruzzo", abruzzo);
+
   return (
     <Layout navigation={navigation} footer={footer} settings={settings}>
       <Head>
@@ -20,6 +23,7 @@ const Abruzzo = ({ abruzzo, navigation, footer, settings }) => {
       </Head>
       <CityListWrapper>
         <CityHeader>
+          <CityBreadcrumb title={abruzzo.data.title}/>
           <RichText field={abruzzo.data.title} className="page_title" />
           <RichText field={abruzzo.data.description} className="page_description" />
         </CityHeader>

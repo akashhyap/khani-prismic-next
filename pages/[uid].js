@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
@@ -11,13 +10,12 @@ import { PrismicNextImage } from "@prismicio/next";
 import { useEffect, useRef, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCalendarDays,
-  faTimesCircle,
-  faClock,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalendarDays, faClock } from "@fortawesome/free-solid-svg-icons";
 
 import { TableOfContent } from "../components/TableOfContent";
+import Link from "next/link";
+import { Bounded } from "../components/Bounded";
+import { Breadcrumb } from "../components/Breadcrumb";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -41,38 +39,46 @@ const Page = ({ page, navigation, footer, settings }) => {
   const articleContent = useRef(null);
   const [totalWords, setTotalWords] = useState(0);
 
-  // console.log("articleContent", articleContent.current);
+  // console.log("page", page);
 
   useEffect(() => {
-    const totalWords = !!twoColumnsTag && articleContent.current.innerText.split(" ").length;
-    setTotalWords(totalWords)
+    const totalWords =
+      !!twoColumnsTag && articleContent.current.innerText.split(" ").length;
+    setTotalWords(totalWords);
   }, [twoColumnsTag]);
 
   return (
     <Layout navigation={navigation} footer={footer} settings={settings}>
       <Head>
-        <title>
-          {prismicH.asText(page.data.title)}
-        </title>
-        <meta name="description" content={prismicH.asText(page.data.meta_description)} />
+        <title>{prismicH.asText(page.data.title)}</title>
+        <meta
+          name="description"
+          content={prismicH.asText(page.data.meta_description)}
+        />
       </Head>
+
       {!twoColumnsTag ? (
         <SliceZone slices={page.data.slices} components={components} />
       ) : (
-        <>
+        <Bounded size="wider">
+          {/* Breadcrumb */}
+          <Breadcrumb title={prismicH.asText(page.data.title)} />
+          {/* End Breadcrumb */}
           <RichText
             field={page.data.title}
-            className="page_title mx-auto mb-5 max-w-5xl pl-6 md:pl-0 pt-10"
+            className="page_title mb-5 pl-6 pt-5 md:pl-0"
           />
 
-          <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 place-items-start">
-
+          <div className="grid grid-cols-1 place-items-start md:grid-cols-3">
             {/* Left Column */}
 
-            <div className="article_content col-span-2 negativeMarginLeft" ref={articleContent}>
+            <div
+              className="article_content negativeMarginLeft col-span-2"
+              ref={articleContent}
+            >
               {/* Blog meta info */}
               <div className="blog_meta_info px-6 py-4">
-                <div className="grid md:grid-cols-6 gap-3 rounded-[15px] border-[1px] border-[#e5e7eb] bg-[#f2f2f2] px-5 py-3">
+                <div className="grid gap-3 rounded-[15px] border-[1px] border-[#e5e7eb] bg-[#f2f2f2] px-5 py-3 md:grid-cols-6">
                   <div className="profile col-span-2 flex items-center">
                     <div className="profile_image relative mr-2">
                       <PrismicNextImage
@@ -128,16 +134,16 @@ const Page = ({ page, navigation, footer, settings }) => {
 
             {/* Right Column */}
 
-            <div className="relative py-4 place-self-start h-full px-5 lg:px-0">
+            <div className="relative h-full place-self-start py-4 px-5 lg:px-0">
               <SliceZone slices={page.data.slices1} components={components} />
               <RichText
                 field={settings.data.site_disclaimer}
-                className="disclaimer rounded-2xl border-[1px] border-[#b8dcf4] bg-[#f0f9ff] p-5 mb-8"
+                className="disclaimer mb-8 rounded-2xl border-[1px] border-[#b8dcf4] bg-[#f0f9ff] p-5"
               />
               <TableOfContent />
             </div>
           </div>
-        </>
+        </Bounded>
       )}
     </Layout>
   );

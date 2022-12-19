@@ -9,6 +9,7 @@ import RichText from "../../components/RichText";
 import { CityListWrapper } from "../../components/CityListWrapper";
 import { CityHeader } from "../../components/CityHeader";
 import { CityProperty } from "../../components/CityProperty";
+import { CityBreadcrumb } from "../../components/CityBreadcrumb";
 
 const Campania = ({ campania, navigation, footer, settings }) => {
   // console.log("campania", campania);
@@ -19,6 +20,7 @@ const Campania = ({ campania, navigation, footer, settings }) => {
       </Head>
       <CityListWrapper>
         <CityHeader>
+          <CityBreadcrumb title={campania.data.title} />
           <RichText field={campania.data.title} className="page_title" />
           <RichText field={campania.data.description} />
         </CityHeader>

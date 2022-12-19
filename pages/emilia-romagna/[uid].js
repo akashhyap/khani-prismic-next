@@ -9,6 +9,7 @@ import RichText from "../../components/RichText";
 import { CityListWrapper } from "../../components/CityListWrapper";
 import { CityHeader } from "../../components/CityHeader";
 import { CityProperty } from "../../components/CityProperty";
+import { CityBreadcrumb } from "../../components/CityBreadcrumb";
 
 const EmiliaRomagna = ({ emilia_romagna, navigation, footer, settings }) => {
   // console.log("emilia_romagna", emilia_romagna);
@@ -19,11 +20,15 @@ const EmiliaRomagna = ({ emilia_romagna, navigation, footer, settings }) => {
       </Head>
       <CityListWrapper>
         <CityHeader>
+          <CityBreadcrumb title={emilia_romagna.data.title} />
           <RichText field={emilia_romagna.data.title} className="page_title" />
           <RichText field={emilia_romagna.data.description} />
         </CityHeader>
         <CityProperty>
-          <SliceZone slices={emilia_romagna.data.slices} components={components} />
+          <SliceZone
+            slices={emilia_romagna.data.slices}
+            components={components}
+          />
         </CityProperty>
       </CityListWrapper>
     </Layout>
@@ -56,7 +61,9 @@ export async function getStaticPaths() {
   const emilia_romagnas = await client.getAllByType("emilia_romagna");
 
   return {
-    paths: emilia_romagnas.map((emilia_romagna) => prismicH.asLink(emilia_romagna, linkResolver)),
+    paths: emilia_romagnas.map((emilia_romagna) =>
+      prismicH.asLink(emilia_romagna, linkResolver)
+    ),
     fallback: false,
   };
 }

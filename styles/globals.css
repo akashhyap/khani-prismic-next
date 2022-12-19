@@ -514,3 +514,23 @@ input[type="search"]::-webkit-search-results-decoration {
     font-weight: var(--font-weight-300);
 
 }
+
+.city_breadcrumb li{
+     position: relative;
+     font-size: 1rem;
+     color: var(--primary-page-title-color);
+     margin-right: 5px;
+}
+
+.city_breadcrumb li a{
+     color: var(--hightlight-text-color);
+}
+
+.city_breadcrumb li::after{
+     content: "/";
+     padding-left: 5px;
+}
+
+.city_breadcrumb li:last-child:after{
+     display: none;
+}
