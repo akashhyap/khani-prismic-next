@@ -587,7 +587,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = BriefSlice | PageTitleSlice | TableOfContentSlice | TextSlice | SectionHeaderSlice | ImageSlice | SplashBgSlice | MostPopularSlice;
+type PageDocumentDataSlicesSlice = BriefSlice | PageTitleSlice | TableOfContentSlice | TextSlice | SectionHeaderSlice | ImageSlice | SplashBgSlice | MostPopularSlice | ClassificazioneBlockSlice;
 /**
  * Slice for *Page → Slice Zone*
  *
@@ -1090,6 +1090,102 @@ type CityPropertySliceVariation = CityPropertySliceDefault;
  *
  */
 export type CityPropertySlice = prismicT.SharedSlice<"city_property", CityPropertySliceVariation>;
+/**
+ * Primary content in ClassificazioneBlock → Primary
+ *
+ */
+interface ClassificazioneBlockSliceDefaultPrimary {
+    /**
+     * Title field in *ClassificazioneBlock → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: classificazione_block.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+}
+/**
+ * Item in ClassificazioneBlock → Items
+ *
+ */
+export interface ClassificazioneBlockSliceDefaultItem {
+    /**
+     * Text field in *ClassificazioneBlock → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: classificazione_block.items[].text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+}
+/**
+ * Default variation for ClassificazioneBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ClassificazioneBlock`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ClassificazioneBlockSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ClassificazioneBlockSliceDefaultPrimary>, Simplify<ClassificazioneBlockSliceDefaultItem>>;
+/**
+ * Primary content in ClassificazioneBlock → Primary
+ *
+ */
+interface ClassificazioneBlockSliceListsPrimary {
+    /**
+     * Title field in *ClassificazioneBlock → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: classificazione_block.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+}
+/**
+ * Item in ClassificazioneBlock → Items
+ *
+ */
+export interface ClassificazioneBlockSliceListsItem {
+    /**
+     * Text field in *ClassificazioneBlock → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: classificazione_block.items[].text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+}
+/**
+ * Lists variation for ClassificazioneBlock Slice
+ *
+ * - **API ID**: `lists`
+ * - **Description**: `ClassificazioneBlock`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ClassificazioneBlockSliceLists = prismicT.SharedSliceVariation<"lists", Simplify<ClassificazioneBlockSliceListsPrimary>, Simplify<ClassificazioneBlockSliceListsItem>>;
+/**
+ * Slice variation for *ClassificazioneBlock*
+ *
+ */
+type ClassificazioneBlockSliceVariation = ClassificazioneBlockSliceDefault | ClassificazioneBlockSliceLists;
+/**
+ * ClassificazioneBlock Shared Slice
+ *
+ * - **API ID**: `classificazione_block`
+ * - **Description**: `ClassificazioneBlock`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ClassificazioneBlockSlice = prismicT.SharedSlice<"classificazione_block", ClassificazioneBlockSliceVariation>;
 /**
  * Default variation for ContactForm Slice
  *
@@ -1909,6 +2005,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AbruzzoDocumentData, AbruzzoDocumentDataSlicesSlice, AbruzzoDocument, BasilicataDocumentData, BasilicataDocumentDataSlicesSlice, BasilicataDocument, CalabriaDocumentData, CalabriaDocumentDataSlicesSlice, CalabriaDocument, CampaniaDocumentData, CampaniaDocumentDataSlicesSlice, CampaniaDocument, EmiliaRomagnaDocumentData, EmiliaRomagnaDocumentDataSlicesSlice, EmiliaRomagnaDocument, FooterDocumentData, FooterDocument, GuideutiliDocumentData, GuideutiliDocumentDataSlicesSlice, GuideutiliDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, RazzeDiCaniDocumentData, RazzeDiCaniDocumentDataSlicesSlice, RazzeDiCaniDocument, SettingsDocumentData, SettingsDocument, ToelettatoriDocumentData, ToelettatoriDocumentDataSlicesSlice, ToelettatoriDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, CityPropertySliceDefaultItem, CityPropertySliceDefault, CityPropertySliceVariation, CityPropertySlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
+        export type { AbruzzoDocumentData, AbruzzoDocumentDataSlicesSlice, AbruzzoDocument, BasilicataDocumentData, BasilicataDocumentDataSlicesSlice, BasilicataDocument, CalabriaDocumentData, CalabriaDocumentDataSlicesSlice, CalabriaDocument, CampaniaDocumentData, CampaniaDocumentDataSlicesSlice, CampaniaDocument, EmiliaRomagnaDocumentData, EmiliaRomagnaDocumentDataSlicesSlice, EmiliaRomagnaDocument, FooterDocumentData, FooterDocument, GuideutiliDocumentData, GuideutiliDocumentDataSlicesSlice, GuideutiliDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocumentDataSlices1Slice, PageDocument, RazzeDiCaniDocumentData, RazzeDiCaniDocumentDataSlicesSlice, RazzeDiCaniDocument, SettingsDocumentData, SettingsDocument, ToelettatoriDocumentData, ToelettatoriDocumentDataSlicesSlice, ToelettatoriDocument, VeterinariDocumentData, VeterinariDocumentDataSlicesSlice, VeterinariDocument, AllDocumentTypes, BriefSliceDefaultPrimary, BriefSliceDefaultItem, BriefSliceDefault, BriefSliceVariation, BriefSlice, CityListSliceDefaultPrimary, CityListSliceDefaultItem, CityListSliceDefault, CityListSliceVariation, CityListSlice, CityPropertySliceDefaultItem, CityPropertySliceDefault, CityPropertySliceVariation, CityPropertySlice, ClassificazioneBlockSliceDefaultPrimary, ClassificazioneBlockSliceDefaultItem, ClassificazioneBlockSliceDefault, ClassificazioneBlockSliceListsPrimary, ClassificazioneBlockSliceListsItem, ClassificazioneBlockSliceLists, ClassificazioneBlockSliceVariation, ClassificazioneBlockSlice, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, EditorChoiceSliceDefaultPrimary, EditorChoiceSliceDefaultItem, EditorChoiceSliceDefault, EditorChoiceSliceVariation, EditorChoiceSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceRoundedPrimary, ImageSliceRounded, ImageSliceVariation, ImageSlice, MostPopularSliceDefaultPrimary, MostPopularSliceDefaultItem, MostPopularSliceDefault, MostPopularSliceVariation, MostPopularSlice, NewsLetterSectionSliceDefaultPrimary, NewsLetterSectionSliceDefault, NewsLetterSectionSliceVariation, NewsLetterSectionSlice, PageTitleSliceDefaultPrimary, PageTitleSliceDefault, PageTitleSliceVariation, PageTitleSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, RightTextSliceDefaultPrimary, RightTextSliceDefault, RightTextSliceRightColumnPrimary, RightTextSliceRightColumn, RightTextSliceVariation, RightTextSlice, SectionHeaderSliceDefaultPrimary, SectionHeaderSliceDefault, SectionHeaderSliceVariation, SectionHeaderSlice, SplashBgSliceDefaultPrimary, SplashBgSliceDefault, SplashBgSliceVariation, SplashBgSlice, TableOfContentSliceDefaultPrimary, TableOfContentSliceDefault, TableOfContentSliceVariation, TableOfContentSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceRightColumnPrimary, TextSliceRightColumn, TextSliceBlogPageTextPrimary, TextSliceBlogPageText, TextSliceVariation, TextSlice };
     }
 }

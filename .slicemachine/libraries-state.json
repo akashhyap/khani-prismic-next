@@ -300,6 +300,143 @@
           }
         }
       },
+      "classificazione_block": {
+        "library": "slices",
+        "id": "classificazione_block",
+        "name": "ClassificazioneBlock",
+        "description": "ClassificazioneBlock",
+        "model": {
+          "id": "classificazione_block",
+          "type": "SharedSlice",
+          "name": "ClassificazioneBlock",
+          "description": "ClassificazioneBlock",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ClassificazioneBlock",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "lists",
+              "name": "Lists",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ClassificazioneBlock",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Amet aute ex non non tempor duis ipsum occaecat anim ea id sunt dolore. Esse excepteur commodo tempor aliquip. Laboris elit non anim esse.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Esse cupidatat anim veniam enim aliquip nisi.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "classificazione_block"
+          },
+          "lists": {
+            "variation": "lists",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "text": [
+                  {
+                    "type": "paragraph",
+                    "text": "Eu reprehenderit commodo dolore laboris amet ad voluptate. Voluptate amet amet eiusmod fugiat tempor nisi culpa elit qui quis cillum id ipsum. Proident irure sint sint ipsum.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Deserunt aliqua laboris dolor ullamco anim cillum aute veniam aliqua. Sit nostrud nostrud sit aute consectetur mollit. Culpa velit dolor consequat qui aliquip ea duis qui enim.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "classificazione_block"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\Office\\Canipiccoli\\Headless\\Prismic\\khani\\slices\\ClassificazioneBlock\\default\\preview.png",
+            "width": 556,
+            "height": 292
+          }
+        }
+      },
       "contact_form": {
         "library": "slices",
         "id": "contact_form",

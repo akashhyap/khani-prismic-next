@@ -49,6 +49,9 @@
             },
             "most_popular": {
               "type": "SharedSlice"
+            },
+            "classificazione_block": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    html {
+    html, h1 {
         @apply font-primary
     }
 
@@ -252,8 +252,9 @@ h6 {
 .page_title h1 {
     font-size: var(--h1-title-font-size);
     line-height: var(--h1-title-line-height);
-    font-weight: var(--font-weight-400);
-    color: var(--primary-page-title-color)
+    font-weight: var(--font-weight-600);
+    color: var(--primary-page-title-color);
+    
 }
 
 .disclaimer h6, .disclaimer p {
@@ -293,6 +294,18 @@ h6 {
 
 .brief-2 {
     background-color: #c94974
+}
+
+.brief-3 {
+    background-color: #ff8500;
+}
+
+.brief-4 {
+    background-color: #ffaa00;
+}
+
+.brief-5 {
+    background-color: #fcbc1d;
 }
 
 .brief p {
@@ -533,4 +546,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .city_breadcrumb li:last-child:after{
      display: none;
+}
+
+.classificazione .text {
+    color: var(--primary-page-title-color);
 }

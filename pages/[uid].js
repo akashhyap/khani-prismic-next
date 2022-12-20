@@ -64,10 +64,6 @@ const Page = ({ page, navigation, footer, settings }) => {
           {/* Breadcrumb */}
           <Breadcrumb title={prismicH.asText(page.data.title)} />
           {/* End Breadcrumb */}
-          <RichText
-            field={page.data.title}
-            className="page_title mb-5 pl-6 pt-5 md:pl-0"
-          />
 
           <div className="grid grid-cols-1 place-items-start md:grid-cols-3">
             {/* Left Column */}
@@ -76,6 +72,10 @@ const Page = ({ page, navigation, footer, settings }) => {
               className="article_content negativeMarginLeft col-span-2"
               ref={articleContent}
             >
+              <RichText
+                field={page.data.title}
+                className="page_title mb-5 px-6 pt-5"
+              />
               {/* Blog meta info */}
               <div className="blog_meta_info px-6 py-4">
                 <div className="grid gap-3 rounded-[15px] border-[1px] border-[#e5e7eb] bg-[#f2f2f2] px-5 py-3 md:grid-cols-6">

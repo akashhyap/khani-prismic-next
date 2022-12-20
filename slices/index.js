@@ -3,6 +3,7 @@
 import Brief from './Brief';
 import CityList from './CityList';
 import CityProperty from './CityProperty';
+import ClassificazioneBlock from './ClassificazioneBlock';
 import ContactForm from './ContactForm';
 import EditorChoice from './EditorChoice';
 import HeroSlice from './HeroSlice';
@@ -21,6 +22,7 @@ export {
 	Brief,
 	CityList,
 	CityProperty,
+	ClassificazioneBlock,
 	ContactForm,
 	EditorChoice,
 	HeroSlice,
@@ -40,6 +42,7 @@ export const components = {
 	brief: Brief,
 	city_list: CityList,
 	city_property: CityProperty,
+	classificazione_block: ClassificazioneBlock,
 	contact_form: ContactForm,
 	editor_choice: EditorChoice,
 	hero_slice: HeroSlice,

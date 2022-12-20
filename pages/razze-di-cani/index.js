@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { PrismicLink, SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
-
 import { createClient, linkResolver } from "../../prismicio";
 import { components } from "../../slices";
 import { Layout } from "../../components/Layout";
@@ -44,7 +43,7 @@ const RazzeDiCani = ({
           {pages.map((post, i) => {
             // console.log("post", post);
             const cani = post.tags.find((tag) => tag === "cani");
-            const postImage = post.data?.slices;
+            const postImage = post.data?.slices[0];
             const date = prismicH.asDate(
               razze_di_cani.data.publishDate ||
                 razze_di_cani.first_publication_date
@@ -52,36 +51,30 @@ const RazzeDiCani = ({
 
             if (cani) {
               return (
-                <Link key={post.id} href={post.uid} legacyBehavior>
-                  <a>
-                    <div className="card">
+                <div className="card" key={post.id}>
+                  <Link href={post.uid} legacyBehavior>
+                    <a>
                       <figure className="relative">
-                        {postImage?.map((image, i) => {
-                          // console.log('image', image);
-                          return (
-                            <PrismicNextImage
-                              key={i}
-                              field={image.primary?.image}
-                              layout="responsive"
-                              width={3}
-                              height={2}
-                              priority="true"
-                              alt=""
-                            />
-                          );
-                        })}
+                        <PrismicNextImage
+                          field={postImage.primary?.image}
+                          layout="responsive"
+                          width={3}
+                          height={2}
+                          alt={prismicH.asText(post.data.title)}
+                          priority="true"
+                        />
                       </figure>
                       <div className="card-desc">
                         <div className="title py-4">
-                          <h3>{post.data.title[0].text}</h3>
+                          <h3>{prismicH.asText(post.data.title)}</h3>
                           <div className="more_desc">
                             <h6>{dateFormatter.format(date)}</h6>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                </Link>
+                    </a>
+                  </Link>
+                </div>
               );
             }
           })}
